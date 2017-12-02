@@ -1,6 +1,7 @@
 package com.example.chenyuelun.hellokotlin
 
 import android.app.Application
+import com.example.utils.ActivityStack
 import com.example.utils.LogUtils
 
 
@@ -35,7 +36,8 @@ open class AppApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        LogUtils.initLogCanPrint(true);//是否可打印日志
+        LogUtils.initLogCanPrint(true)//是否可打印日志
+        ActivityStack.initApplication(this)
 
     }
 }
